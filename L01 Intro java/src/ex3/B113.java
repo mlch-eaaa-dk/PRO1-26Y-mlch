@@ -6,8 +6,6 @@ public class B113 {
         IO.println("y = " + (3.4 * 5.9 - 44.5 * 2.1) / (3.4 * 0.55 - 50.2 * 2.1));
         IO.println();
 
-
-        // pre: a*d - b*f != 0
         double a = 3.4;
         double b = 50.2;
         double c = 2.1;
@@ -17,10 +15,10 @@ public class B113 {
         IO.println(a + " * x + " + b + " * y = " + e);
         IO.println(c + " * x + " + d + " * y = " + f);
 
-//        if (a * d - b * c == 0) {
-//            IO.println("ingen løsning");
-//            return;
-//        }
+        if (a * d - b * c == 0) {
+            IO.println("ingen løsning");
+            return;
+        }
 
         IO.println("x = " + (e * d - b * f) / (a * d - b * c));
         IO.println("y = " + (a * f - e * c) / (a * d - b * c));
@@ -28,18 +26,18 @@ public class B113 {
 
         a = 5.7;
         b = 7.2;
-        c= 11.4;
-        d= 14.4;
+        c = 11.4;
+        d = 14.4;
         e = 2.6;
         f = 5.2;
 
         IO.println(a + " * x + " + b + " * y = " + e);
         IO.println(c + " * x + " + d + " * y = " + f);
 
-//        if (a * d - b * c == 0) {
-//            IO.println("ingen løsning");
-//            return;
-//        }
+        if (a * d - b * c == 0) {
+            IO.println("ingen løsning");
+            return;
+        }
 
         IO.println("x = " + (e * d - b * f) / (a * d - b * c));
         IO.println("y = " + (a * f - e * c) / (a * d - b * c));
