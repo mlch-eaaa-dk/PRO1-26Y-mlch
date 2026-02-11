@@ -9,7 +9,7 @@ public class Team {
 
         boolean isGirl = gender.equalsIgnoreCase("girl");
         boolean isUnder8 = age < 8;
-        if (isGirl) { // girl
+        if (!isGirl) { // girl
             if (isUnder8) {
                 IO.println("Tumbling girls");
             } else {
