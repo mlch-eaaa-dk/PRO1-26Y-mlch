@@ -10,7 +10,6 @@ public class Ex6 {
         IO.println("Computer's choice: " + numberToName(computerNo));
 
         String result = result(userNo, computerNo);
-        String result1 = result(userNo, computerNo);
 
         IO.println("*** " + result + " ***");
     }
