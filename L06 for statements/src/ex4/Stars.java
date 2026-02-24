@@ -39,18 +39,74 @@ public class Stars {
         }
     }
 
-    public static void exB(int rowCount) {
-        // TODO
-        IO.println("NOT IMPLEMENTED");
+    // Print the char 'ch' 'count' times
+    public void printChar(char ch, int count) {
+        for (int i = 1; i <= count; i++) {
+            IO.print(ch);
+        }
     }
 
-    public static void exC(int rowCount) {
-        // TODO
-        IO.println("NOT IMPLEMENTED");
+
+    public void exB(int rowCount) {
+        for (int row = 1; row <= rowCount; row++) {
+            // print row number
+            IO.print(String.format("%2d: ", row));
+
+            // print dashes
+            int dashCount = rowCount - row;
+            printChar(' ', dashCount);
+
+            // print stars
+            int starCount = rowCount - dashCount;
+            printChar('*', starCount);
+
+            IO.println();
+        }
     }
 
-    public static void exD(int rowCount) {
-        // TODO
-        IO.println("NOT IMPLEMENTED");
+    public void exC(int rowCount) {
+        for (int row = 1; row <= rowCount; row++) {
+            // print row number
+            IO.print(String.format("%2d: ", row));
+
+            // print dashes
+            int dashCount = row - 1;
+            printChar(' ', dashCount);
+
+            // print stars
+            int starCount = rowCount - dashCount;
+            printChar('*', starCount);
+
+            IO.println();
+        }
     }
+
+    public void exD(int rowCount) {
+        for (int row = 1; row <= rowCount; row++) {
+            // print row number
+            IO.print(String.format("%2d: ", row));
+
+            // calculate star count
+            int starCount;
+            if (row <= rowCount / 2) {
+                starCount = 2 * row - 1;
+            } else {
+                starCount = 2 * (rowCount - row) + 1;
+            }
+            // calculate dash count on each side
+            int dashCount = rowCount - starCount;
+
+            // print dashes
+            printChar(' ', dashCount / 2);
+
+            // print stars
+            printChar('*', starCount);
+
+            // print dashes
+            printChar(' ', dashCount / 2);
+
+            IO.println();
+        }
+    }
+
 }
