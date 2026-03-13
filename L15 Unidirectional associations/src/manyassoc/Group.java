@@ -1,0 +1,34 @@
+package manyassoc;
+
+import java.util.ArrayList;
+
+public class Group {
+    private String name;
+
+    // link Group --> 0..* Person
+    private final ArrayList<Person> persons = new ArrayList<>();
+
+    public Group(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Group(" + name + ")";
+    }
+
+    //-----------------------------------------------------
+    // link methods
+
+    public ArrayList<Person> getPersons() {
+        return persons;
+    }
+
+    public void addPerson(Person person) {
+        persons.add(person);
+    }
+
+    public void removePerson(Person person) {
+        persons.remove(person);
+    }
+}
